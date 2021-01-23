@@ -1,12 +1,12 @@
 package io.github.manuelernesto.takeaway.Adapter
 
-import android.support.v7.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import io.github.manuelernesto.takeaway.Interface.ItemClickListener
 
-class MenuViewHolder : RecyclerView.ViewHolder, View.OnClickListener {
+class MenuViewHolder : androidx.recyclerview.widget.RecyclerView.ViewHolder, View.OnClickListener {
 
     var categoryImg: ImageView
     var categoryName: TextView

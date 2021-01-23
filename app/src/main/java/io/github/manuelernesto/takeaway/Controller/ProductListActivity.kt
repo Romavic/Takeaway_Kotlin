@@ -4,8 +4,8 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
-import android.support.v7.widget.LinearLayoutManager
+import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -44,7 +44,7 @@ class ProductListActivity : AppCompatActivity() {
 
         categoryId = intent.getStringExtra(CATEGORY_EXTRA)
 
-        val manager = LinearLayoutManager(this)
+        val manager = androidx.recyclerview.widget.LinearLayoutManager(this)
         recyclerviewFoodList.layoutManager = manager
         recyclerviewFoodList.setHasFixedSize(true)
         loadMenuItems(categoryId)

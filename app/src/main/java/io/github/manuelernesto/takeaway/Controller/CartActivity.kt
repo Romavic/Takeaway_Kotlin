@@ -4,8 +4,8 @@ import android.annotation.SuppressLint
 import android.app.Dialog
 import android.content.Context
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
-import android.support.v7.widget.LinearLayoutManager
+import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -48,7 +48,7 @@ class CartActivity : AppCompatActivity() {
     private fun loadListProduct() {
         carts = Database(this).getCarts()
         adapter = CartAdapter(this, carts)
-        val manager = LinearLayoutManager(this)
+        val manager = androidx.recyclerview.widget.LinearLayoutManager(this)
         recyclerview_cart.layoutManager = manager
         recyclerview_cart.setHasFixedSize(true)
         recyclerview_cart.adapter = adapter

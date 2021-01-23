@@ -2,7 +2,7 @@ package io.github.manuelernesto.takeaway.Adapter
 
 import android.content.Context
 import android.graphics.Color
-import android.support.v7.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.ImageView
@@ -14,7 +14,7 @@ import java.text.NumberFormat
 import java.util.*
 
 
-class CartAdapter(private val context: Context, private val orders: List<Order>) : RecyclerView.Adapter<CartViewHolder>() {
+class CartAdapter(private val context: Context, private val orders: List<Order>) : androidx.recyclerview.widget.RecyclerView.Adapter<CartViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CartViewHolder {
         val layoutInflater = LayoutInflater.from(context)
