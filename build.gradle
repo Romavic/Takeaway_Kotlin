@@ -2,10 +2,48 @@
 
 buildscript {
     ext.kotlin_version = '1.4.21'
+
+    ext {
+        // Sdk and tools
+        compileSdkVersion = 30
+        minSdkVersion = 21
+        targetSdkVersion = 30
+
+        // App dependencies
+        appCompatVersion = '1.2.0'
+        alerter = '4.0.2'
+        androidToOtherDevice = '1.1'
+        cardview = '1.0.0'
+        circleImageview = "3.1.0"
+        constraintLayoutVersion = '2.1.0-alpha1'
+        coreTestingVersion = '2.1.0'
+        coroutinesVersion = "1.4.2"
+        espressoVersion = '3.3.0'
+        elegantNumberButton = "1.0.2"
+        fragmentVersion = '1.3.0-beta02'
+        firebaseAnalytics = "18.0.0"
+        firebaseCore = "18.0.0"
+        glideVersion = '4.11.0'
+        gradleVersion = '4.1.1'
+        junitVersion = '4.13.1'
+        kprogresshud = '1.2.0'
+        kotlinVersion = '1.4.21'
+        ktlintVersion = '0.38.1'
+        ktxVersion = '1.3.2'
+        legacySupportV4 = '1.0.0'
+        lifecycleVersion = '2.2.0'
+        materialVersion = '1.2.1'
+        navigationVersion = '2.3.2'
+        recyclerViewVersion = '1.2.0-beta01'
+        roomVersion = '2.2.6'
+        kotlin_version = '1.4.21'
+    }
+
     repositories {
         google()
         jcenter()
     }
+
     dependencies {
         classpath 'com.android.tools.build:gradle:4.1.2'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
@@ -17,9 +55,6 @@ allprojects {
     repositories {
         google()
         jcenter()
+        maven { url 'https://jitpack.io' }
     }
-}
-
-task clean(type: Delete) {
-    delete rootProject.buildDir
 }
