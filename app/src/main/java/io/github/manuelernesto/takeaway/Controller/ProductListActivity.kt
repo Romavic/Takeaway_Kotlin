@@ -41,8 +41,7 @@ class ProductListActivity : AppCompatActivity() {
         database = FirebaseDatabase.getInstance()
         product = database.getReference(PRODUCT_EXTRA)
 
-
-        categoryId = intent.getStringExtra(CATEGORY_EXTRA)
+        categoryId = intent.getStringExtra(CATEGORY_EXTRA)!!
 
         val manager = androidx.recyclerview.widget.LinearLayoutManager(this)
         recyclerviewFoodList.layoutManager = manager

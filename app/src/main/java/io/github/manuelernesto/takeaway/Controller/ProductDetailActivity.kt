@@ -28,7 +28,7 @@ class ProductDetailActivity : AppCompatActivity() {
         database = FirebaseDatabase.getInstance()
         productRef = database.getReference(PRODUCT_EXTRA)
 
-        productId = intent.getStringExtra(PRODUCT_EXTRA)
+        productId = intent.getStringExtra(PRODUCT_EXTRA)!!
 
         loadDetailProduct(productId)
         saveToCart()

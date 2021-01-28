@@ -14,24 +14,36 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Controller.MainActivity">
+
+        </activity>
+
+        <activity android:name=".Controller.SignUpActivity" />
+
+        <activity
+            android:name=".Controller.HomeActivity"
+            android:label="@string/title_activity_home"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name=".Controller.ProductListActivity"
+            android:label="@string/title_activity_product"
+            android:theme="@style/Theme" />
+
+        <activity android:name=".Controller.ProductDetailActivity" />
+
+        <activity android:name=".Controller.CartActivity" />
+
+        <activity
+            android:name=".app.view.authentication.AuthenticationActivity"
+            android:label="@string/title_activity_home"
+            android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Controller.SignInActivity" />
-        <activity android:name=".Controller.SignUpActivity" />
-        <activity
-            android:name=".Controller.HomeActivity"
-            android:label="@string/title_activity_home"
-            android:theme="@style/AppTheme" />
-        <activity
-            android:name=".Controller.ProductListActivity"
-            android:label="@string/title_activity_product"
-            android:theme="@style/Theme" />
-        <activity android:name=".Controller.ProductDetailActivity" />
-        <activity android:name=".Controller.CartActivity"></activity>
+
     </application>
 
 </manifest>

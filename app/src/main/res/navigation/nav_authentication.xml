@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_authentication.xml"
+    app:startDestination="@id/loginAccountFragment">
+
+    <fragment
+        android:id="@+id/loginAccountFragment"
+        android:name="io.github.manuelernesto.takeaway.app.view.authentication.LoginAccountFragment"
+        android:label="login_account_fragment"
+        tools:layout="@layout/login_account_fragment" >
+        <action
+            android:id="@+id/actionLoginAccountToRegisterAccount"
+            app:destination="@id/registerAccountFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/registerAccountFragment"
+        android:name="io.github.manuelernesto.takeaway.app.view.authentication.RegisterAccountFragment"
+        android:label="register_account_fragment"
+        tools:layout="@layout/register_account_fragment" >
+        <action
+            android:id="@+id/actionRegisterAccountToLoginAccount"
+            app:destination="@id/loginAccountFragment" />
+    </fragment>
+
+</navigation>
